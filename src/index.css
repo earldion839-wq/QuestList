@@ -1,0 +1,78 @@
+@import "tailwindcss";
+
+:root {
+  --mod-bg: #0d0e12;
+  --mod-surface: #15171e;
+  --mod-surface-elevated: #1c1f29;
+  --mod-border: rgba(255, 255, 255, 0.09);
+  --mod-text: #f3f4f6;
+  --mod-text-muted: #9ca3af;
+  --mod-accent: #fa1e4e;
+  --mod-accent-fg: #ffffff;
+  --mod-accent-soft: rgba(250, 30, 78, 0.14);
+  --mod-font-family: 'Plus Jakarta Sans', system-ui, -apple-system, sans-serif;
+  --mod-display-font: 'Outfit', 'Plus Jakarta Sans', system-ui, sans-serif;
+  --mod-font-size: 15px;
+  --mod-radius: 10px;
+  --mod-radius-sm: 6px;
+}
+
+html {
+  font-size: var(--mod-font-size);
+  font-family: var(--mod-font-family);
+  background-color: var(--mod-bg);
+  color: var(--mod-text);
+  -webkit-font-smoothing: antialiased;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  background-color: var(--mod-bg);
+  color: var(--mod-text);
+  font-family: var(--mod-font-family);
+}
+
+.font-display {
+  font-family: var(--mod-display-font);
+}
+
+.tabular-nums {
+  font-variant-numeric: tabular-nums;
+}
+
+/* Subtle background patterns controlled by Mod Studio */
+.bg-pattern-solid {
+  background-image: none;
+}
+
+.bg-pattern-grid {
+  background-image:
+    linear-gradient(to right, var(--mod-border) 1px, transparent 1px),
+    linear-gradient(to bottom, var(--mod-border) 1px, transparent 1px);
+  background-size: 32px 32px;
+}
+
+.bg-pattern-dots {
+  background-image: radial-gradient(var(--mod-border) 1.25px, transparent 1.25px);
+  background-size: 20px 20px;
+}
+
+.bg-pattern-diagonal {
+  background-image: repeating-linear-gradient(
+    -45deg,
+    transparent,
+    transparent 14px,
+    var(--mod-border) 14px,
+    var(--mod-border) 15px
+  );
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}

@@ -1,0 +1,6 @@
+{
+  "name": "QuestList Studio",
+  "description": "A customizable, installable multi-activity to-do workspace for gaming quests, daily chores, and personal projects with live appearance mods.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
